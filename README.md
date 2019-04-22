@@ -4,7 +4,8 @@
 
 The app uses the microphone from user app and calculates the decibels accordingly. Using the amount of decibels calculated the app shows whether the noise is measurable or not.
 
-The app starts with a minimum threshold decibels and it keep on recording the decibels in real time. The app firstly calls the mainActivity which starts the SoundMeter java class, which subscribes the decibel calculation and real time decibel value collection.
+The app starts with a minimum threshold decibels and it keep on recording the decibels in real time. The app firstly calls the mainActivity which starts the SoundMeter java class, which performs the decibel calculation and real time decibel value collection.
+The app checks whether the noise is bareable or not depending on the decibel value it has calculated and then updates the user with the warning if the noise is unbearable. The maximum value of noise depends on the max amount of noise recorded ever and it changes everytime the refresh is button. The threshold decibels which the app starts or the the threshhold value when the refresh button is clicked is 11 decibels. Hence the minimum amount of noise is 11 decibels and it can go upto max measurement of 120 decibels over which it is extremely harmful for the user to be in that region.
 The app collects the decibels ,stores it in buffer and then transfer it to cloud.
 The android application uses a gradle mechanism using which it connects to the IBM Watson IOT cloud using the apache edgent application and then stores the buffer on the cloud.
 
